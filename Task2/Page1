@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SecondTask</title>
+</head>
+
+<body>
+
+	<form id="name" >  
+	    <b>Имя: </b> <br>
+		<input name="name" placeholder="Name" required ></br> 
+		<a href="#" onclick="showFun('surname','name')">Далее</a>
+		<a href="#" onclick="showFun('name', 'surname')">Назад</a>
+	</form> 
+
+	<form id="surname" hidden > 
+		<b>Фамилия:</b> </br> 
+		<input name="surname" placeholder="Surname" required></br>
+		<a href="#" onclick="showFun('mail','surname')">Далее</a>
+		<a href="#" onclick="showFun('name','surname')">Назад</a>
+
+	</form> 
+
+	<form id="mail" hidden > 
+		<b>Почта:</b></br> 
+		<input  name="surname" id = "inputMail" placeholder="@mail" required ></br> 
+		<a href="#" onclick="validMail()">Завершить!</a>
+ 	    <a href="#" onclick="showFun('surname', 'mail')">Назад</a>	 
+
+	</form> 
+
+	<form id="finish" hidden > 
+		<b>Спасибо!</b></br> 	 
+
+	</form> 
+
+	<form id="error" hidden > 
+		<b>Неверно указан Email</b></br> 	 
+	</form> 
+
+<script type="text/javascript">
+
+
+function showFun(show,hide) {
+//function get two parametrs: the first is what show, the second is what hinde
+	     
+      
+    	document.getElementById(show).style.display = 'block';
+    	visible = true;
+
+     	document.getElementById(hide).style.display = 'none';
+    	visible = false;
+         
+    }
+
+
+function validMail(){ //The function check email correctly
+
+   var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+   var string = document.getElementById("inputMail").value;
+   if(pattern.test(string)){
+   	showFun( 'mail','error');
+   	showFun( 'finish','mail');
+   }
+   else{
+   			showFun('error','');
+   		
+   }
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
