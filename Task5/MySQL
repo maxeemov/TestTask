@@ -1,0 +1,11 @@
+SELECT Trainee.name, Trainee.email, Course.name, History.end From History JOIN Trainee on Trainee.trainee_id = History.history_id JOIN Course on Course.course_id = History.course_id  WHERE Course.name = 'PHP' AND History.end = '8' AND History.status = '1'
+
+SELECT Course.name, COUNT(*) FROM History JOIN Course on Course.course_id = History.course_id WHERE History.start = '8' AND History.status = '1' GROUP BY Course.name
+
+
+
+
+
+
+
+
