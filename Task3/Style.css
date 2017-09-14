@@ -2,119 +2,130 @@
 
 body {
 	background-color: gray;
-}
+} 
+
 
 h1 {
-	color: blue;
+	color: yellow;
 	text-align: center;
 }
- 
- 
- 
 
- 
 
-.image img {
-       	
-    margin-right: 10px;
+img {
+	position: absolute;
+	top: 150px;
 	width: 400px; 
 	height: 300px;
-	border: 2px solid #585858;
-
+	border: 2px solid;
 }
 
-
-
-
-}
-span{
+p{
+	top: 436px;	 
+	width: 400px;
+	height: 40px;
 	position: absolute;
-	top:60%;
+	border: 1px solid gray;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 0px 0px 5px 5px; 
+	padding: 15px 2px;
 }
+
+b{
+	position: absolute;
+	top: 390px;	 
+	width: 300px;
+	height: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 15px;
+	color: yellow;
+}
+#img1 {
+	left: 50px;
+}
+
+#img2 {
+	left: 475px;
+} 
+
+#img3 {
+	left: 900px;
+} 
 
 #text1{
-	 position: absolute;
-	 left: 1%;
-	 width: 400px;
-     overflow: hidden;
-     font-family:Arial, Helvetica, sans-serif;
-     font-size:18px;
-     box-sizing:border-box;              
-     padding:10px;
-     background-color:rgba(0,0,0,.3);
 
-
+	left: 49px;
 }
 #text2{
-	 position: absolute;
-	 left: 33%;
-	 width: 400px;
-     overflow: hidden;
-     font-family:Arial, Helvetica, sans-serif;
-     font-size:18px;
-      box-sizing:border-box;              
-     padding:10px;
-     background-color:rgba(0,0,0,.3);
-	 
+
+	left: 474px;
 }
 #text3{
-	 position: absolute;
-	 left: 63%;
-	 width: 400px;
-     overflow: hidden;
-     font-family:Arial, Helvetica, sans-serif;
-     font-size:18px;
-      box-sizing:border-box;              
-     padding:10px;
-     background-color:rgba(0,0,0,.3);
-	 
+
+	left: 899px;
 }
 
 
-.h3{
+
+#title1{
 	position: absolute;
-	top:50%;
-	border: 3px solid #585858;
-}
- .t1{
-	 position: absolute;
-	 left: 1%;
+	left: 50px;
 
 }
-.t2{
-	 position: absolute;
-	 left: 33%;
-	 
-}
-.t3{
-	 position: absolute;
-	 left: 63%;
-	 
 
-} 
-  
-
-  .t1 {
-	border-bottom: 1px dotted #0077AA;
-	cursor: help;
-}
-
-.t1::after {
-	background: rgba(0, 0, 0, 0.8);
-	border-radius: 8px 8px 8px 0px;
-	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-	color: #FFF;
-	content: attr(data-tooltip); /* Главная часть кода, определяющая содержимое всплывающей подсказки */
-	margin-top: -24px;
-	opacity: 0; /* Наш элемент прозрачен... */
-	padding: 3px 7px;
+#title2{
 	position: absolute;
-	visibility: hidden; /* ...и скрыт. */
-			
-	transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+	left: 475px;
 }
-		
-.t1:hover::after {
-	opacity: 1; /* Показываем его */
-	visibility: visible;
+
+#title3{
+	position: absolute;
+	left: 900px;
 }
+
+#extended1{
+	position: absolute;
+	top: 150px;
+	left: 51px; 
+	width: 372px;
+	height: 273px;
+	background: rgba(0, 0, 0, 0.9);
+	padding: 15px;
+	color: white;
+	display: none;
+}
+
+#extended2{
+	position: absolute;
+	top: 150px;
+	left: 476px; 
+	width: 372px;
+	height: 273px;
+	background: rgba(0, 0, 0, 0.9);
+	padding: 15px;
+	color: white;
+	display: none;
+}
+
+#extended3{
+	position: absolute;
+	top: 150px;
+	left: 901px; 
+	width: 372px;
+	height: 273px;
+	background: rgba(0, 0, 0, 0.9	);
+	padding: 15px;
+	color: white;
+	display: none;
+}
+
+.block1:hover #extended1{
+	display: block;
+}
+.block2:hover #extended2{
+	display: block;
+}
+
+.block3:hover #extended3{
+	display: block;
+}
+
